@@ -22,7 +22,6 @@ header {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-
 }
 .hero {
     margin-top: 10rem;
@@ -89,6 +88,57 @@ header {
     height: 25px;
     object-fit: cover;
 }
+
+.responsiveMenu {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    right: 100%;
+    top:0;
+    z-index:1;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*  Vertically centers element */
+}
+.responsiveMenu ul {
+    list-style-type:none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+}
+.responsiveMenu li {
+    list-style-type: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.responsiveMenu a {
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.responsiveMenu a#learnMore{
+    color: rgb(131, 218, 131)
+}
+.responsiveMenu a:hover{
+    opacity: 0.6;
+}
+
+.responsiveMenu.active{
+    right:0;
+
+}
+.responsiveMenu .close {
+    position:absolute;
+    top: 1rem;
+    right: 85%;
+}
+
 
 /* FOR MOBILE DESIGN */
 @media screen and (min-width: 150px){
