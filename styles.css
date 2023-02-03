@@ -1,0 +1,327 @@
+ 
+/* DESIGN FOR BOTH MOBILE AND DESKTOP */
+
+body {
+    background-color: aliceblue;
+}
+
+header {
+    background-image: url(images/leaf6.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.title {
+
+    color: white;
+    /* color: rgb(70, 67, 67); */
+    position: relative;
+    top: 27%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}
+.hero {
+    margin-top: 10rem;
+}
+#hero  {
+    margin-top: auto;
+    background-color: grey;
+    width: 60px;
+    height: 3px;
+}
+.hero h1 {
+    font-size: 25px;
+    color: grey;
+    text-align: center;
+}
+.title hr {
+    margin-top: auto;
+    background-color: grey;
+    width: 60px;
+    height: 3px;
+ }
+
+ .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+ }
+ .card {
+    margin: 1.5rem;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border: 1px solid white;
+    position: relative;
+ }
+
+ .card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+ }
+ .cardText {
+    top: 50%;
+    padding: 2rem;
+    left: 0;
+    height: 50%;
+    position: absolute;
+ }
+ .cardText p {
+    text-align: center;
+ }
+ .about {
+    background-color: white;
+ }
+
+ .aboutText h2 {
+    color: grey;
+    text-align: center;
+}
+
+.socials img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+/* FOR MOBILE DESIGN */
+@media screen and (min-width: 150px){
+    
+    .menu {
+        display: none  /* Hide the menu header */
+    }
+    .hamurger {
+        display: block;
+    }
+
+    span.andMore {
+        display:contents;
+    }
+    
+    header {
+        height: 100vh; /* Increase the height of the header so that it
+                            covers the whole height of the landing page*/
+    }
+    .hamburger img {
+        padding: 0.5rem;
+        height: 30px;
+        width: 30px;
+    }
+    .logo  {
+        display: flex;
+        justify-content: space-between;
+    }
+    .about {
+        margin-bottom: 0;
+        background-color: white;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutImage {
+        overflow:hidden;
+        width: 99vw;
+        height: 250px;
+    }
+    .aboutImage img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .aboutText {
+        overflow: hidden;
+        padding: 1rem;
+        height:max-content;
+    }
+    .aboutText p {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 30px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .signUp {
+        padding: 1rem 0;
+        width: 100%;
+        justify-content: center;
+        background-color:#e1e6e0;
+    }
+    .signUpContent {
+        text-align: center;
+    }
+    .signUpContent h3 {
+        letter-spacing:1px;
+        font-size: 30px;
+    }
+    input[type='email'] {
+        width: 22rem;
+        padding: 0.5rem;
+        height: 2.2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #d6dad5;
+        border: 2px solid white;
+        outline: none;
+    }
+    button[type='submit'] {
+        margin-top: 1.5rem;
+        width: 23.5rem;
+        height: 2.8rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 5px;
+        padding: 0.5rem;
+        background-color: #e1e6e0
+    }
+    footer {
+        padding: 3rem 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .quickLinks {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+    }
+    .quickLinks a {
+        text-decoration: none;
+        color: black;
+        margin-bottom: 1rem;
+    }
+    .socials img {
+        margin-left: 1rem;
+    }
+ }
+/* END OF DESIGN FOR MOBILE */
+
+ /* FOR DESKTOP DESIGN */
+ 
+ @media screen and (min-width: 800px) {
+
+    .menuwrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu ul {
+        display: flex;
+    }
+    .menu ul li {
+        list-style-type: none;
+        padding: 0 1rem;
+    }
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        
+    }
+    span.andMore {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    header {
+        height: 100vh
+    }
+    .title h1 {
+        font-size: 4.5rem;
+    }
+    .subscribe {
+        padding: 0.5rem 1.5rem;
+        border: 1px solid grey;
+    }
+    .about {
+        overflow: hidden;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+    }
+    .aboutImage {
+        width: 50vw;
+        height: 100%;
+    }
+    .aboutImage img {
+        object-fit: cover;
+        /* width: 80%; */
+        height: 100%;
+    }
+    .aboutText {
+        padding: 3rem;
+        width: 50vw;
+        height: inherit;
+    }
+    .aboutText p {
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* SIGN UP SECTION  */
+    .signUp {
+        padding:3rem 0;
+        justify-content: center;
+        /* width: 100%; */
+        background-color:#e1e6e0;
+    }
+    .signUpContent {
+        text-align: center;
+    }
+    .signUpContent h3 {
+        letter-spacing:3px;
+        font-size: 20px;
+    }
+    .signUpContent p {
+        font-size: 18px;
+    }
+
+    input[type='email'] {
+        width: 22rem;
+        padding: 0.5rem;
+        height: 2.2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #d6dad5;
+        border: 2px solid white;
+        outline: none;
+    }
+    button[type='submit'] {
+        margin-top: 1.5rem;
+        height: 2.2rem;
+        width: fit-content;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 5px;
+        padding: 0.5rem 1rem;
+    }
+    /* END OF SIGN UP SECTION */
+
+    /* FOOTER SECTION */
+    .quickLinks {
+        display: flex;
+        flex-direction: row;
+
+    }
+    .quickLinks a {
+        text-decoration: none;
+        color: black;
+        margin-left: 1rem;
+    }
+    footer {
+        background-color: white;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/* END OF DESKTOP DESIGN */
+
+
